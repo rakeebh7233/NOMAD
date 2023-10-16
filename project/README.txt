@@ -22,3 +22,8 @@ While developing you may want the server to reload after changes in package file
     $ gearbox serve --reload --debug
 
 Then you are ready to go.
+
+Startup after setting up for first time
+tg2env\Scripts\activate (Windows)
+cd NOMAD\project
+gearbox serve --reload --debug

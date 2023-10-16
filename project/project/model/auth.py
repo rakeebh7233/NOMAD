@@ -16,7 +16,6 @@ __all__ = ['User', 'Group', 'Permission']
 from sqlalchemy import Table, ForeignKey, Column
 from sqlalchemy.types import Unicode, Integer, DateTime
 from sqlalchemy.orm import relationship, synonym
-
 from project.model import DeclarativeBase, metadata, DBSession
 
 

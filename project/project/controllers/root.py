@@ -40,7 +40,7 @@ class RootController(BaseController):
     def _before(self, *args, **kw):
         tmpl_context.project_name = "project"
 
-    @expose('project.templates.index')
+    @expose('project.templates.home')
     def index(self):
         """Handle the front-page."""
         return dict(page='index')
@@ -53,6 +53,21 @@ class RootController(BaseController):
     def environ(self):
         """This method showcases TG's access to the wsgi environment."""
         return dict(page='environ', environment=request.environ)
+    
+    @expose('project.templates.itinerary')
+    def itinerary(self):
+        """Handle the "itinerary" page."""
+        return dict(page='itinerary')
+    
+    @expose('project.templates.budget')
+    def budget(self):
+        """Handle the "budget" page."""
+        return dict(page='budget')
+    
+    @expose('project.templates.profile')
+    def profile(self):
+        """Handle the "profile" page."""
+        return dict(page='profile')
 
     @expose('project.templates.data')
     @expose('json')

@@ -1,22 +1,11 @@
 Metadata-Version: 2.1
 Name: project
 Version: 0.1
-Home-page: 
+Summary: UNKNOWN
+Home-page: UNKNOWN
 Author: 
 Author-email: 
-Requires-Dist: TurboGears2>=2.4.3
-Requires-Dist: Beaker>=1.8.0
-Requires-Dist: Kajiki>=0.6.3
-Requires-Dist: zope.sqlalchemy>=1.2
-Requires-Dist: sqlalchemy
-Requires-Dist: alembic
-Requires-Dist: repoze.who
-Requires-Dist: tw2.forms
-Requires-Dist: tgext.admin>=0.6.1
-Requires-Dist: WebHelpers2
-Requires-Dist: Babel
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
 Provides-Extra: testing
-Requires-Dist: WebTest>=1.2.3; extra == "testing"
-Requires-Dist: nose; extra == "testing"
-Requires-Dist: coverage; extra == "testing"
-Requires-Dist: gearbox; extra == "testing"

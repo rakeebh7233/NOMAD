@@ -1,0 +1,22 @@
+<html py:extends="master.xhtml" py:strip="True">
+    <head py:block="head" py:strip="True">
+      <title py:block="master_title">Welcome to TurboGears 2.4, standing on the shoulders of giants, since 2007</title>
+    </head>
+
+    <body py:block="body" py:strip="True">
+      <div class="row">
+        <div class="col-md">
+          <div class="jumbotron">
+            <h1>Create Your Itinerary</h1>
+          </div>
+          <form>
+            <label for="fname">Departure</label><br/>
+            <input type="text" id="fname" name="fname" value="John"/><br/>
+            <label for="lname">Destination</label><br/>
+            <input type="text" id="lname" name="lname" value="Doe"/>
+          </form>
+          <button type="button" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </body>
+</html>

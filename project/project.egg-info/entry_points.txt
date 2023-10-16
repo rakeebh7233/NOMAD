@@ -3,3 +3,4 @@ turbogears-devtools = tg.devtools
 
 [paste.app_factory]
 main = project.config.application:make_app
+

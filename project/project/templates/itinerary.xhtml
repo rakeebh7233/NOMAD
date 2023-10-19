@@ -1,22 +1,102 @@
 <html py:extends="master.xhtml" py:strip="True">
     <head py:block="head" py:strip="True">
+      <link rel="stylesheet" href="project/project/css/custom_itinerary.scss" />
       <title py:block="master_title">Welcome to TurboGears 2.4, standing on the shoulders of giants, since 2007</title>
     </head>
 
-    <body py:block="body" py:strip="True">
+    <main id="main" class="container">
       <div class="row">
-        <div class="col-md">
-          <div class="jumbotron">
-            <h1>Create Your Itinerary</h1>
-          </div>
-          <form>
-            <label for="fname">Departure</label><br/>
-            <input type="text" id="fname" name="fname" value="John"/><br/>
-            <label for="lname">Destination</label><br/>
-            <input type="text" id="lname" name="lname" value="Doe"/>
-          </form>
-          <button type="button" class="btn btn-primary">Next</button>
-        </div>
+         <div class="col-xs-12 col-lg-offset-3 col-lg-6">
+            <div class="m-b-md text-center">
+               <h1 id="title">Customize Your Travel</h1>
+               <p id="description" class="text-center">Help us build your dream itinerary </p>
+            </div>
+            <form method="GET" action="" id="survey-form" name="survey-form">
+               <fieldset>
+                  <label for="name" id="name-label">Itinerary Name *
+                  <input class="" type="text" id="name" name="name" placeholder="Enter your name (required)" />
+                  </label>
+               </fieldset>
+               <fieldset>
+                  <label for="email" id="email-label">
+                  Email *
+                  <input class="" type="email" id="email" name="email" placeholder="Enter your email (required)" />
+                  </label>
+               </fieldset>
+               <fieldset>
+                  <label for="number" id="number-label">
+                  Destination *
+                  <input class="" type="text" id="dest" name="dest" placeholder="Enter your destination (city name) (required)" />
+                  </label>
+               </fieldset>
+               <fieldset>
+                <label for="number" id="number-label">
+                Departure *
+                <input class="" type="text" id="dep" name="dep" placeholder="Enter your departure location (city name) (required)" />
+                </label>
+             </fieldset>
+               <fieldset>
+                  <label for="dropdown">
+                     Which best describes your reason for travel? *
+                     <select id="dropdown" name="dropdown" class="m-t-xs">
+                        <option value="leisure">Vacation/Leisure</option>
+                        <option value="business">Business</option>
+                        <option value="family">Family</option>
+                        <option value="other">Other</option>
+                     </select>
+                  </label>
+               </fieldset>
+               <fieldset>
+                  <label for="number" id="number-label">
+                    Departure Date *
+                    <input class="" type="date" id="dep_date" name="dep_date" placeholder="Enter your departure date (required)" />
+                  </label>
+               </fieldset>
+               <fieldset>
+                <label for="number" id="number-label">
+                  Arrival Date *
+                  <input class="" type="date" id="arr_date" name="arr_date" placeholder="Enter your arrival date (required for round trips)"/>
+                </label>
+             </fieldset>
+               <fieldset>
+                  <div class="labels">
+                     Your favorite leisure activites (Check all that apply):
+                  </div>
+                  <label for="survey-form-leisure1" class="m-b-xs">
+                  <input type="checkbox" id="survey-form-leisure" value="resturants" />
+                  Resturants (Local Cuisine)
+                  </label>
+                  <label for="survey-form-leisure2" class="m-b-xs">
+                  <input type="checkbox" id="survey-form-leisure2" value="nature" />
+                  Nature Activities (Hiking, Rafting, Biking, etc.)
+                  </label>
+                  <label for="survey-form-leisure3" class="m-b-xs">
+                  <input type="checkbox" id="survey-form-leisure3" value="arts" />
+                  The Arts (Museums, Galleries, Live Shows, Live Music, etc.)
+                  </label>
+                  <label for="survey-form-leisure4" class="m-b-xs">
+                  <input type="checkbox" id="survey-form-leisure4" value="history" />
+                  Historical Sites (Monuments, Landmarks, etc.)
+                  </label>
+                  <label for="survey-form-leisure5" class="m-b-xs">
+                  <input type="checkbox" id="survey-form-leisure5" value="children" />
+                  Children's Activities (Zoos, Amusement Parks, etc.)
+                  </label>
+                  <label for="survey-form-leisuree6" class="m-b-xs">
+                  <input type="checkbox" id="survey-form-leisure6" value="misc" />
+                  Miscellaneous
+                  </label>
+               </fieldset>
+               <fieldset>
+                <label for="priceRange" class="form-label">Price Range</label>
+                <input type="range" min="0" max="50000" value="5000" oninput="rangeValue.innerText = this.value" /><p id="rangeValue">5000</p>
+               </fieldset>
+               <button id="submit" type="submit" class="btn">Ready to Explore</button>
+            </form>
+         </div>
       </div>
-    </body>
+    </main>
+
 </html>
+
+

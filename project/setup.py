@@ -17,7 +17,7 @@ except:
     pass
 
 import sys
-py_version = sys.version_info[:2]
+py_version = sys.version_info[:2]    
 
 try:
     from setuptools import setup, find_packages

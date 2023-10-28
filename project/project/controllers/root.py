@@ -39,6 +39,15 @@ class RootController(BaseController):
 
     def _before(self, *args, **kw):
         tmpl_context.project_name = "project"
+    
+    @expose()
+    def _default(self, *args, **kw):
+        """This is the fallback controller action.
+
+        It's called if no other controller matches the request method
+        and path info.
+        """
+        return redirect('/index')
 
     @expose('project.templates.home')
     def index(self):
@@ -132,3 +141,5 @@ class RootController(BaseController):
         """
         flash(_('We hope to see you soon!'))
         return HTTPFound(location=came_from)
+
+    

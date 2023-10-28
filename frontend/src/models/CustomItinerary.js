@@ -14,11 +14,18 @@ function CustomerItinerary({addCustomItinerary}) {
     const[travelReason, setTravelReason] = useState([]);
     const[leisureActivites, setLeisureActivities] = useState([]);
     const[budget, setBudget] = useState("");
+    const[date, setDate] = useState("");
+
+
 
     const handleSubmit = (e) => {
         e.PreventDefault();
         addCustomItinerary(itineraryName, emailList, destination, departure, departureDate, returnDate, travelReason, leisureActivites, budget);
     };
+
+    const searchCustomComponents = (e) =>{
+        console.log("hi");
+    }
 
     return (
         <form onSubmit={e => { handleSubmit(e) }}>

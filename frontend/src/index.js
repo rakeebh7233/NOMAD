@@ -3,22 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Home from './models/Home';
-import NavBar from './shared/NavBar';
-import {Route, Routes } from 'react-router-dom';
-import CustomerItinerary from './models/CustomItinerary';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-    <NavBar></NavBar>
-    <Home></Home>
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/itinerary' element={<CustomerItinerary/>}/>
-    </Routes>
-  </>
-
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"; 
 import { useParams } from "react-router-dom";
 
-function CustomerItinerary({addCustomItinerary}) {
+function BeginItinerary({addCustomItinerary}) {
     const[itineraryName, setItineraryName] = useState("");
     const[emailList, setEmailList] = useState([]);
     const[destination, setDestination] = useState("");
@@ -133,5 +133,5 @@ function CustomerItinerary({addCustomItinerary}) {
 
 }
 
-export default CustomerItinerary
+export default BeginItinerary
 

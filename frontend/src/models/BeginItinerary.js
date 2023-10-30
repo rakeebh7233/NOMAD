@@ -1,6 +1,7 @@
 import React from "react";
 import Select from 'react-select';
 import axios from "axios";
+import "../styles/BeginItinerary.css";
 import { useEffect, useState } from "react"; 
 import { useParams } from "react-router-dom";
 
@@ -28,7 +29,7 @@ function BeginItinerary({addCustomItinerary}) {
     }
 
     return (
-        <form onSubmit={e => { handleSubmit(e) }}>
+        <form class="flex-form" onSubmit={e => { handleSubmit(e) }}>
             <label>Itinerary Name:</label>
             <br />
             <input 

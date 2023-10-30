@@ -30,7 +30,7 @@ function UserProfile() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form class="flex-form" onSubmit={handleSubmit}>
         <h3>Personal Information</h3>
         <div className='row'>
             <div className='col-sm-3'>

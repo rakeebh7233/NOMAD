@@ -18,7 +18,7 @@ function App() {
           <Route path='/itinerary' exact element={<CustomerItinerary/>}/>
         </Routes>
       </Router>
-    </div>
+    </div> 
   );
 }
 

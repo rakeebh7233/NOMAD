@@ -49,7 +49,7 @@ class RootController(BaseController):
         """
         return redirect('/index')
 
-    @expose('project.templates.home')
+    @expose('project.templates.rand')
     def index(self):
         """Handle the front-page."""
         return dict(page='index')

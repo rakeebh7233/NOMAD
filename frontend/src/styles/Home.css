@@ -1,3 +1,7 @@
+body {
+  background-color: #fafae2;
+}
+
 video {
     object-fit: cover;
     width: 100%;
@@ -14,25 +18,28 @@ video {
     justify-content: center;
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: contain;
-    background-image: url(https://c4.wallpaperflare.com/wallpaper/84/1009/108/manarola-italy-night-houses-cliff-coast-wallpaper-preview.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    
 
   }
-  
-  .home-container > h1 {
-    color: #e74e11;
-    font-size: 80px;
-    font-family: 'Trattatello', sans-serif;
-    margin-top: -100px;
+
+  .home-container > .row{
+    width: 100%;  
   }
   
-  .home-container > p {
+  .home-container h1 {
+    color: #776646;
+    font-size: 50px;
+    font-family: 'Trattatello', sans-serif;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-left: 10%;
+  }
+  
+  .home-container p {
     margin-top: 8px;
     color: #ffffff;
     font-size: 32px;
+    margin-left: 10%;
     font-family: 'Trattatello','Fantasy','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
@@ -45,6 +52,13 @@ video {
     background-color: #7e6cd1;
     color: #fff;
     font-size: 20px;
+  }
+
+  #homeBackground {
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/84/1009/108/manarola-italy-night-houses-cliff-coast-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   .search-btn:hover {
@@ -60,6 +74,7 @@ video {
     border-radius: 0.5rem;
     background: #ffffff;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    width: 80%
   
   }
   

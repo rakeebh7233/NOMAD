@@ -128,7 +128,7 @@ function BeginItinerary({addCustomItinerary}) {
                 isMulti
             />
             <br/>
-            <button onClick={searchCustomComponents}> TO YOUR NEXT ADVENTURE </button>
+            <button id="beginButton" onClick={searchCustomComponents}> TO YOUR NEXT ADVENTURE </button>
       </form>
     );
 

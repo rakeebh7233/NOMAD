@@ -1,7 +1,7 @@
 import React from "react";
 import Select from 'react-select';
 import axios from "axios";
-import "./CustomItin.css";
+import "../styles/CustomItin.css";
 import { useEffect, useState } from "react"; 
 import { useParams } from "react-router-dom";
 
@@ -32,7 +32,7 @@ function CustomerItinerary(){
 
 
     return(
-        <>
+        <section id="customItinPage">
         <div className="row">
 
         <div className="col-sm-6">
@@ -142,7 +142,7 @@ function CustomerItinerary(){
        
 
 
-        </>
+        </section>
     );
 }
 

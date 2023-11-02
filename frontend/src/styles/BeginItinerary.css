@@ -9,7 +9,7 @@
     background-color: #f4f4f4;
   }
   
-  .container {
+  #beginItinPage .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -18,12 +18,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  form {
+  #beginItinPage form {
     display: flex;
     flex-direction: column;
   }
   
-  label {
+  #beginItinPage label {
     margin-top: 10px;
     font-weight: bold;
   }
@@ -54,7 +54,7 @@
     font-style: italic;
   }
   
-  select {
+  #beginItinPageselect {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -78,7 +78,7 @@
   }
   
   /* Adjustments for better spacing */
-  br {
+  #beginItinPage br {
     display: none;
     margin: 10px 0;
   }

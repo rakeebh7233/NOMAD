@@ -16,3 +16,15 @@ code {
 nav {
   background-color: #819f87;
 }
+
+.loginShow {
+  display: block;
+  transition: 1000ms;
+  opacity: 1;
+}
+
+.loginShow.active {
+  position: absolute;
+  transform: translateY(100px) scale(0);
+  opacity: 0;
+}

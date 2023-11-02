@@ -3,8 +3,15 @@ import Select from 'react-select';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Login from "../models/Login";
 
-function NavBar() {
+function NavBar({ handleLoginClick }) {
+    
+    const handleLogin = () => {
+        console.log("handleLoginClick NavBar.js");
+        handleLoginClick();
+    }
+
     return (
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -36,7 +43,7 @@ function NavBar() {
                             <a class="nav-link text-light" href="/userprofile">User Profile</a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-dark" type="button">
+                    <button onClick={handleLogin} class="btn btn-outline-dark" type="button">
                         Login
                     </button>
                 </div>

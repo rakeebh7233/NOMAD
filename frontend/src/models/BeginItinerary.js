@@ -29,7 +29,8 @@ function BeginItinerary({addCustomItinerary}) {
     }
 
     return (
-        <form class="flex-form" onSubmit={e => { handleSubmit(e) }}>
+        <section id="beginItinPage">
+            <form class="flex-form" onSubmit={e => { handleSubmit(e) }}>
             <label>Itinerary Name:</label>
             <br />
             <input 
@@ -130,6 +131,8 @@ function BeginItinerary({addCustomItinerary}) {
             <br/>
             <button id="beginButton" onClick={searchCustomComponents}> TO YOUR NEXT ADVENTURE </button>
       </form>
+        </section>
+        
     );
 
 }

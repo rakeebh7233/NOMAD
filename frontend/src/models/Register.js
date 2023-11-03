@@ -1,28 +1,12 @@
+import "../styles/Register.css";
 
 function Register() {
     return (
         <section class="text-center text-lg-start">
-          {/* <style>
-            .cascading-right {
-              margin-right: -50px;
-            }
-        
-            @media (max-width: 991.98px) {
-              .cascading-right {
-                margin-right: 0;
-              }
-            }
-          </style> */}
-        
           <div class="container py-4">
             <div class="row g-0 align-items-center">
               <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="card cascading-right" 
-                    // style="
-                    // background: hsla(0, 0%, 100%, 0.55);
-                    // backdrop-filter: blur(30px);
-                    // "
-                    >
+                <div class="card cascading-right" >
                   <div class="card-body p-5 shadow-5 text-center">
                     <h2 class="fw-bold mb-5">Sign up now</h2>
                     <form>
@@ -87,8 +71,7 @@ function Register() {
               </div>
         
               <div class="col-lg-6 mb-5 mb-lg-0">
-                <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
-                  alt="" />
+                <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-100 rounded-4 shadow-4" height="625" />
               </div>
             </div>
           </div>

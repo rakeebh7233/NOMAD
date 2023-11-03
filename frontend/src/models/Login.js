@@ -8,7 +8,7 @@ const LoginForm = ({ isLoginVisible, closeLogin }) => {
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                        <div class="card shadow-2-strong" style={{ borderRadius: "1rem" }}>
+                        <div class="card shadow-2-strong" style={{ borderRadius: "1rem", border: "1px solid" }}>
                             <div id="closeLogin" onClick={closeLogin}>
                                 <CloseButton />
                             </div>
@@ -32,7 +32,11 @@ const LoginForm = ({ isLoginVisible, closeLogin }) => {
                                 </div>
 
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-                                <button onClick={console.log("hello")} class="btn btn-info btn-lg btn-block" type="button" href="/register">Register</button>
+                                <button onClick={console.log("hello")} class="btn btn-info btn-lg btn-block" type="button">
+                                    <a class="nav-link text-light" href="/register">Register</a>
+                                </button>
+                                
+
                                 <hr class="my-4"></hr>
 
                                 <button class="btn btn-lg btn-block btn-primary" style={{ backgroundColor: "#dd4b39" }}

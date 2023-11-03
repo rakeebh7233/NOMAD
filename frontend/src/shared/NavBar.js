@@ -6,12 +6,6 @@ import { useParams } from "react-router-dom";
 import Login from "../models/Login";
 
 function NavBar({ handleLoginClick }) {
-    
-    const handleLogin = () => {
-        console.log("handleLoginClick NavBar.js");
-        handleLoginClick();
-    }
-
     return (
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -43,8 +37,8 @@ function NavBar({ handleLoginClick }) {
                             <a class="nav-link text-light" href="/userprofile">User Profile</a>
                         </li>
                     </ul>
-                    <button onClick={handleLogin} class="btn btn-outline-dark" type="button">
-                        Login
+                    <button onClick={handleLoginClick} class="btn btn-outline-dark" type="button">
+                        Sign In
                     </button>
                 </div>
             </div>

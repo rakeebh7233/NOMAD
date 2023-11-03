@@ -11,6 +11,7 @@
     "axios": "^1.5.1",
     "mdb-react-ui-kit": "^6.3.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",

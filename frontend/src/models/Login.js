@@ -1,14 +1,17 @@
 import React from 'react';
+import CloseButton from 'react-bootstrap/CloseButton';
 
 
-
-const LoginForm = ({ isLoginVisible }) => {
+const LoginForm = ({ isLoginVisible, closeLogin }) => {
     return (
-        <section className={`${!isLoginVisible ? "active" : ""} loginShow`} class="vh-100">
+        <section className={`${isLoginVisible ? "active" : ""} loginShow`} class="vh-100 loginShow">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                         <div class="card shadow-2-strong" style={{ borderRadius: "1rem" }}>
+                            <div id="closeLogin" onClick={closeLogin}>
+                                <CloseButton />
+                            </div>
                             <div class="card-body p-5 text-center">
 
                                 <h3 class="mb-5">Sign in</h3>
@@ -29,7 +32,7 @@ const LoginForm = ({ isLoginVisible }) => {
                                 </div>
 
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-                                <button class="btn btn-info btn-lg btn-block" type="button" href="#">Register</button>
+                                <button onClick={console.log("hello")} class="btn btn-info btn-lg btn-block" type="button" href="/register">Register</button>
                                 <hr class="my-4"></hr>
 
                                 <button class="btn btn-lg btn-block btn-primary" style={{ backgroundColor: "#dd4b39" }}

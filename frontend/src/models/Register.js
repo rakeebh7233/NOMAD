@@ -17,10 +17,12 @@ function Register() {
           <div class="container py-4">
             <div class="row g-0 align-items-center">
               <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="card cascading-right" style="
-                    background: hsla(0, 0%, 100%, 0.55);
-                    backdrop-filter: blur(30px);
-                    ">
+                <div class="card cascading-right" 
+                    // style="
+                    // background: hsla(0, 0%, 100%, 0.55);
+                    // backdrop-filter: blur(30px);
+                    // "
+                    >
                   <div class="card-body p-5 shadow-5 text-center">
                     <h2 class="fw-bold mb-5">Sign up now</h2>
                     <form>
@@ -93,3 +95,5 @@ function Register() {
         </section>
     )
 }
+
+export default Register;

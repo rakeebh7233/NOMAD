@@ -7,6 +7,7 @@ import NavBar from './shared/NavBar';
 import UserProfile from './models/UserProfile'
 import CustomerItinerary from './models/CustomerItinerary';
 import Login from './models/Login';
+import Register from './models/Register';
 
 function App() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
@@ -15,21 +16,26 @@ function App() {
     setIsLoginVisible(!isLoginVisible);
   }
 
+  const closeLogin = () => {
+    setIsLoginVisible(false);
+  }
+
   return (
     <div>
       <NavBar handleLoginClick={handleLoginClick} />
-      <Login isLoginVisible={isLoginVisible} />
 
       <Router>
         <Routes>
-          <Route path='/' exact element={<Home/>}/>
-          <Route path='/beginitinerary' exact element={<BeginItinerary/>}/>
-          <Route path='/userprofile' exact element={<UserProfile/>}/>
-          <Route path='/itinerary' exact element={<CustomerItinerary/>}/>
+          <Route path='/' exact element={<Home />} />
+          <Route path='/beginitinerary' exact element={<BeginItinerary />} />
+          <Route path='/userprofile' exact element={<UserProfile />} />
+          <Route path='/itinerary' exact element={<CustomerItinerary />} />
+          <Route path='/register' exact element={<Register />} />
         </Routes>
       </Router>
 
-    </div> 
+      <Login isLoginVisible={isLoginVisible} closeLogin={closeLogin} />
+    </div>
   );
 }
 

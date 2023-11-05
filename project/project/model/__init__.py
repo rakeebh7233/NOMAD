@@ -5,6 +5,13 @@ import zope.sqlalchemy
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
+from project.model.auth import User, Group, Permission
+from project.model.flight import Flight
+from project.model.hotel import Hotel
+from project.model.user_login import UserLogin
+from project.model.user_info import UserInfo
+from project.model.user_finances import UserFinances
+
 # Global session manager: DBSession() returns the Thread-local
 # session object appropriate for the current web request.
 maker = sessionmaker(autoflush=True, autocommit=False)
@@ -38,6 +45,18 @@ metadata = DeclarativeBase.metadata
 ######
 
 
+# BEGIN: 4a5b6c7d8e9f
+
+# Import your model modules here.
+from project.model.auth import User, Group, Permission
+from flight_model import Flight
+from hotel_model import Hotel
+from user_login_model import UserLogin
+from user_info_model import UserInfo
+from user_finances_model import UserFinances
+
+__all__ = ('User', 'Group', 'Permission', 'Flight', 'Hotel', 'UserLogin', 'UserInfo', 'UserFinances')
+
 def init_model(engine):
     """Call me before using any of the tables or classes in the model."""
     DBSession.configure(bind=engine)
@@ -55,7 +74,13 @@ def init_model(engine):
     # t_reflected = Table("Reflected", metadata,
     #                     autoload=True, autoload_with=engine)
     # mapper(Reflected, t_reflected)
+    
+    # Create the tables for the models
+    DeclarativeBase.metadata.create_all(bind=engine)
+    
     return DBSession
+
+# END: 4a5b6c7d8e9f
 
 # Import your model modules here.
 from project.model.auth import User, Group, Permission

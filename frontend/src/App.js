@@ -4,10 +4,10 @@ import { useState } from 'react';
 import BeginItinerary from './models/BeginItinerary';
 import Home from './models/Home';
 import NavBar from './shared/NavBar';
-import UserProfile from './models/UserProfile'
 import CustomerItinerary from './models/CustomerItinerary';
 import Login from './models/Login';
 import Register from './models/Register';
+import Form from './models/UserProfileForm/Form';
 
 function App() {
   const [isLoginVisible, setIsLoginVisible] = useState(false);
@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/beginitinerary' exact element={<BeginItinerary />} />
-          <Route path='/userprofile' exact element={<UserProfile />} />
+          <Route path='/userprofile' exact element={<Form />} />
           <Route path='/itinerary' exact element={<CustomerItinerary />} />
           <Route path='/register' exact element={<Register />} />
         </Routes>

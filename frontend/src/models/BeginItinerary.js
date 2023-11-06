@@ -14,13 +14,12 @@ function BeginItinerary({addCustomItinerary}) {
                                                 departureDate: "", 
                                                 returnDate: "", 
                                                 travelReason: [], 
-                                                leisureActivites: "", 
-                                                budget:"", 
-                                                date:"" })
+                                                leisureActivites: ""})
 
     const handleSubmit = (e) => {
-        e.PreventDefault();
-        addCustomItinerary(formData.itineraryName, formData.emailList, formData.destination, formData.departure, formData.departureDate, formData.returnDate, formData.travelReason, formData.leisureActivites, formData.budget);
+        //e.PreventDefault();
+        console.log(formData)
+        //addCustomItinerary(formData.itineraryName, formData.emailList, formData.destination, formData.departure, formData.departureDate, formData.returnDate, formData.travelReason, formData.leisureActivites, formData.budget);
     };
 
     const searchCustomComponents = (e) =>{
@@ -32,7 +31,7 @@ function BeginItinerary({addCustomItinerary}) {
             <div className="header">
                 <h1>Your Next Adventure Awaits...</h1>
             </div>
-            <div className="form-container">
+            <div className="form-container1">
                 <div className="body">
                     <div className="itinerary-container">
                         <label>
@@ -74,7 +73,7 @@ function BeginItinerary({addCustomItinerary}) {
                             placeholder="Departing from..."
                             value={formData.departure}
                             onChange={(event) =>
-                            setFormData({ ...formData, itineraryName: event.target.value })
+                            setFormData({ ...formData, departure: event.target.value })
                             }
                         />
                         </label>
